@@ -3,6 +3,7 @@ Nombre del programa: Gato.py
 Descripción: Este script ejecuta un clasico juego de gato.
 
 Autores:
+    -Equipo Mac Trio
     -Acosta Avila Diego Ernersto
     -Diaz Pompa Jesus Eduardo
     -Ruiz Alejandro Ignacio Alberto
