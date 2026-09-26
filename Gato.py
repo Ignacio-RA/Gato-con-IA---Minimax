@@ -56,6 +56,7 @@ COLOR_BOTON_HOVER = (129, 212, 250)   # Azul claro
 COLOR_BOTON_MONEDA = (255, 179, 0)     # Dorado
 COLOR_BLOQUEO = (0, 0, 0, 150)        # Transparencia para bloquear el tablero
 
+# Titulo de la ventana
 pantalla = pygame.display.set_mode((ANCHO_PANTALLA, ALTO_PANTALLA))
 pygame.display.set_caption("Juego del Gato - IA (Mac Trio)")
 
@@ -93,7 +94,7 @@ def dibujar_interfaz():
     pantalla.fill(COLOR_FONDO_TABLERO)
     mouse_pos = pygame.mouse.get_pos()
     
-    # 1. Panel Superior
+    # Panel Superior
     pygame.draw.rect(pantalla, COLOR_FONDO_PANEL, (0, 0, ANCHO_PANTALLA, ALTO_SUPERIOR))
     
     # Marcador
@@ -133,12 +134,12 @@ def dibujar_interfaz():
     rect_turno = txt_turno.get_rect(center=(ANCHO_PANTALLA // 2, 108))
     pantalla.blit(txt_turno, rect_turno)
 
-    # 2. Cuadrícula del Tablero
+    # Cuadrícula del Tablero
     for i in range(1, FILAS):
         pygame.draw.line(pantalla, COLOR_LINEA, (0, ALTO_SUPERIOR + i * TAMANO_CELDA), (ANCHO_PANEL, ALTO_SUPERIOR + i * TAMANO_CELDA), ANCHO_LINEA)
         pygame.draw.line(pantalla, COLOR_LINEA, (i * TAMANO_CELDA, ALTO_SUPERIOR), (i * TAMANO_CELDA, ALTO_SUPERIOR + ALTO_TABLERO), ANCHO_LINEA)
 
-    # 3. Panel Inferior
+    # Panel Inferior
     pygame.draw.rect(pantalla, COLOR_FONDO_PANEL, (0, ALTO_SUPERIOR + ALTO_TABLERO, ANCHO_PANTALLA, ALTO_INFERIOR))
     
     rect_btn_reinicio = pygame.Rect(ANCHO_PANTALLA // 2 - 100, ALTO_SUPERIOR + ALTO_TABLERO + 15, 200, 50)
